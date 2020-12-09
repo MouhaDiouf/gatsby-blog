@@ -6,8 +6,8 @@
 
 module.exports = {
   /* Your site config here */
-  sideMetadata: {
-    title: "Mouhamadou Diouf - Full-stack developer",
+  siteMetadata: {
+    title: "Mouhamadou Diouf - Full Stack developer",
     author: "Mouha Diouf",
   },
   plugins: ["gatsby-plugin-sass"],
