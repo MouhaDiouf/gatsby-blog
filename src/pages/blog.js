@@ -1,11 +1,12 @@
 import React from "react"
+import Layout from "../components/layout"
 
 function blog() {
   return (
-    <div>
+    <Layout>
       <h1>Blog</h1>
       <p>Posts will show up later on</p>
-    </div>
+    </Layout>
   )
 }
 

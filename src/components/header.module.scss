@@ -3,28 +3,32 @@
   display: flex;
   align-items: center;
   padding: 1rem 0 3rem;
+  flex-wrap: wrap;
 }
 .title {
   color: #000; 
   font-size: 3rem;
   text-decoration: none;
+  flex: 1;
 }
 .nav-list {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   list-style-type: none;
   margin: 0;
 }
 
-.link  {
-  color: black;
+.nav-item  {
+  color: #999;
+  font-size: .9rem;
+  margin-right: 1.3rem;
+  text-decoration: none;
 }
 
-.header nav {
-  flex: 0.7;
+.nav-item:hover {
+  color: #666666;
 }
 
-.header h1 {
-  flex: 0.3;
+.active-nav-item {
+  color: #333333;
 }
