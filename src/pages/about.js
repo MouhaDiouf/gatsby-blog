@@ -1,9 +1,11 @@
 import { Link } from "gatsby"
 import React from "react"
 import Footer from "../components/footer"
+import Header from "../components/header"
 function about() {
   return (
     <div>
+      <Header />
       <h1>About </h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
