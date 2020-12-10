@@ -7,8 +7,18 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Mouhamadou Diouf - Full Stack developer",
-    author: "Mouha Diouf",
+    title: "Mouha Diouf - Full Stack developer",
+    author: "Mo Diouf",
   },
-  plugins: ["gatsby-plugin-sass"],
+  plugins: [
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src/`,
+      },
+    },
+    "gatsby-transformer-remark",
+  ],
 }
