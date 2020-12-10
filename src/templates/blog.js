@@ -15,6 +15,16 @@ export const query = graphql`
   }
 `
 function BlogPost(props) {
+  const options = {
+    renderNode: {
+      "embedded-asset-block": node => {
+        const alt = node.data.target.fields.title["en-US"]
+        const url = node.data.target.fields.file["en-US"].url
+        return <img src={url} alt={alt} />
+      },
+    },
+  }
+  console.log(JSON.parse(props.data.contentfulGastbyApp.body.raw))
   return (
     <Layout>
       <h1>{props.data.contentfulGastbyApp.title}</h1>
@@ -22,7 +32,7 @@ function BlogPost(props) {
       <p>
         {" "}
         {documentToReactComponents(
-          JSON.parse(props.data.contentfulGastbyApp.body.raw)
+          JSON.parse(props.data.contentfulGastbyApp.body.raw, options)
         )}
       </p>
     </Layout>
